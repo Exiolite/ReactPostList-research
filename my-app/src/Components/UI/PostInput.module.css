@@ -1,0 +1,6 @@
+.PostInput {
+    width: 100%;
+    padding: 4px 16px;
+    max-resolution: 5px 8px;
+    border: 2px solid teal;
+}
