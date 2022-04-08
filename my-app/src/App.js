@@ -1,49 +1,46 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import "./Styles/App.css"
-import PostItem from "./Components/PostItem";
 import PostsList from "./Components/PostsList";
-import PostButton from "./Components/UI/PostButton";
-import PostInput from "./Components/UI/PostInput";
+import PostForm from "./Components/PostForm";
+import PostFilter from "./Components/PostFilter";
 
 function App() {
-    const [posts, setPosts] = useState([
-    ])
+  const [posts, setPosts] = useState([])
+  const [filter, setFilter] = useState({sortType: "", searchQuery: ""})
 
-    const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
-
-    const addNewPost = (e) => {
-        e.preventDefault()
-        const newPost = {
-            id: Date.now(),
-            title,
-            description,
-        }
-        setPosts([...posts, newPost])
+  const sortedPosts = useMemo(() => {
+    if (filter.sortType) {
+      return [...posts].sort((a, b) => a[filter.sortType].localeCompare(b[filter.sortType]))
     }
+    return posts
+  }, [filter.sortType, posts])
 
-    return (
-        <div className="App">
-            <form>
-                <PostInput
-                    type="text"
-                    placeholder="Name"
-                    value={title}
-                    onChange={setTitle}
-                    onChange={e => setTitle(e.target.value)}
-                />
-                <PostInput
-                    type="text"
-                    placeholder="Description"
-                    value={description}
-                    onChange={e => setDescription(e.target.value)}
-                />
-                <PostButton onClick={addNewPost} >Create post</PostButton>
-            </form>
+  const sortedSearchedPosts = useMemo(() => {
+    return sortedPosts.filter(o => o.title.toLowerCase().includes(filter.searchQuery))
+  }, [filter, posts])
 
-            <PostsList posts={posts} title={"Posts"} />
-        </div>
-    );
+  const createPost = (post) => {
+    setPosts([...posts, post])
+  }
+
+  const deletePost = (post) => {
+    setPosts(posts.filter(o => o.id !== post.id))
+  }
+
+  return (
+    <div className="App">
+      <PostForm createPost={createPost} />
+      <PostFilter
+        filter={filter}
+        setFilter={setFilter}
+      />
+      <PostsList
+        deletePost={deletePost}
+        posts={sortedSearchedPosts}
+        title={"Posts"}
+      />
+    </div>
+  );
 }
 
 export default App;

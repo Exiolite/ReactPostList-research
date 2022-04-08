@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,6 +48,7 @@
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -76,6 +77,11 @@
       <workItem from="1649309467853" duration="5588000" />
       <workItem from="1649346768355" duration="3830000" />
       <workItem from="1649355301867" duration="1220000" />
+      <workItem from="1649360225287" duration="44000" />
+      <workItem from="1649360675235" duration="52000" />
+      <workItem from="1649400984328" duration="4234000" />
+      <workItem from="1649405822829" duration="25000" />
+      <workItem from="1649405866243" duration="7926000" />
     </task>
     <servers />
   </component>
@@ -95,10 +101,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="698" y="234" key="#JavaScript" timestamp="1649407679363">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="698" y="234" key="#JavaScript/-1366.304.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1649407679363" />
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1649309186749">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.304.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1649309186749" />
+    <state x="693" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1649405738104">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="693" y="327" key="#com.intellij.fileTypes.FileTypeChooser/-1366.304.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1649405738104" />
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649313121745">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -175,5 +189,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/-1366.304.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1649309732933" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1649424065778">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1366.304.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1649424065778" />
   </component>
 </project>
