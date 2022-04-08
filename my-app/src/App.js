@@ -3,10 +3,13 @@ import "./Styles/App.css"
 import PostsList from "./Components/PostsList";
 import PostForm from "./Components/PostForm";
 import PostFilter from "./Components/PostFilter";
+import PostFormModal from "./Components/Modals/PostFormModal";
+import PostButton from "./Components/UI/PostButton";
 
 function App() {
   const [posts, setPosts] = useState([])
   const [filter, setFilter] = useState({sortType: "", searchQuery: ""})
+  const [isPostFormVisible, setPostFormVisible] = useState(false)
 
   const sortedPosts = useMemo(() => {
     if (filter.sortType) {
@@ -21,6 +24,7 @@ function App() {
 
   const createPost = (post) => {
     setPosts([...posts, post])
+    setPostFormVisible(false);
   }
 
   const deletePost = (post) => {
@@ -29,11 +33,16 @@ function App() {
 
   return (
     <div className="App">
-      <PostForm createPost={createPost} />
       <PostFilter
         filter={filter}
         setFilter={setFilter}
       />
+      <PostFormModal visible={isPostFormVisible} setVisible={setPostFormVisible}>
+        <PostForm createPost={createPost} />
+      </PostFormModal>
+      <PostButton onClick={() => setPostFormVisible(true)}>
+        Create post
+      </PostButton>
       <PostsList
         deletePost={deletePost}
         posts={sortedSearchedPosts}

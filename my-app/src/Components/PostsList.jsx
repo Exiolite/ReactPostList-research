@@ -1,15 +1,25 @@
 import React from 'react';
 import PostItem from './PostItem';
+import TransitionGroup from "react-transition-group/cjs/TransitionGroup";
+import CSSTransition from "react-transition-group/cjs/CSSTransition";
 
 const PostsList = ({posts, title, deletePost}) => {
   if (posts.length) {
     return (
       <div>
         <h1>{title}</h1>
-        {posts.map(post =>
-          <PostItem post={post} deletePost={deletePost} key={post.id}/>
-        )}
-      </div>
+        <TransitionGroup>
+          {posts.map(post =>
+            <CSSTransition
+              key={post.id}
+              timeout={500}
+              className="post"
+            >
+              <PostItem post={post} deletePost={deletePost} key={post.id}/>
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+       </div>
     )
   }
   return (
