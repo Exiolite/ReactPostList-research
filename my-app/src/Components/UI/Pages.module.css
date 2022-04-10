@@ -1,0 +1,32 @@
+.Pages {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.PageCurrent{
+    border: 2px solid teal;
+    font-size: 20px;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    background: teal;
+    border-radius: 50%;
+    color: white;
+    margin-right: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.Page {
+    border: 2px solid teal;
+    font-size: 20px;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border-radius: 50%;
+    color: teal;
+    margin-right: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}

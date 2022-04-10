@@ -1,0 +1,22 @@
+.LoaderHolder {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+.Loader {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px dashed teal;
+    animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
